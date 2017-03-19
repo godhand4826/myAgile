@@ -1,0 +1,7 @@
+language: java
+install: ant deps
+
+jdk:
+	- 1.8.0_101
+
+script: ant build
