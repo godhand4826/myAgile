@@ -3,5 +3,5 @@ jdk: oraclejdk8
 addons:
   apt:
     packages:
-      - language-pack-touch-zh-hant
+      - language-pack-zh-hant
 script: ant build
