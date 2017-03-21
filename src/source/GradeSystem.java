@@ -1,18 +1,16 @@
 package source;
 
-import java.io.File;
 import java.util.LinkedList;
 import java.util.Scanner;
 
 public class GradeSystem implements IGradeSystem {
-	public static String FILEPATH_STRING = "src\\file\\inputFile.txt";
 	LinkedList<Grade> grades = new LinkedList<Grade>();
 	float[] weights = new float[] { 0.1f, 0.1f, 0.1f, 0.3f, 0.4f };
 
 	public GradeSystem(String testFilePath) {// for testing
 		Scanner scanner = null;
 		try {
-			scanner = new Scanner(new File(testFilePath), "utf-8");
+			scanner = new Scanner(GradeSystem.class.getResourceAsStream(testFilePath), "utf-8");
 			while (scanner.hasNextLine()) {
 				grades.add(new Grade(scanner.next(), scanner.next(), scanner
 						.nextInt(), scanner.nextInt(), scanner.nextInt(),
@@ -27,7 +25,7 @@ public class GradeSystem implements IGradeSystem {
 	public GradeSystem() {
 		Scanner scanner = null;
 		try {
-			scanner = new Scanner(new File(FILEPATH_STRING), "utf-8");
+			scanner = new Scanner(GradeSystem.class.getResourceAsStream("/file/inputFile.txt"), "utf-8");
 			while (scanner.hasNextLine()) {
 				grades.add(new Grade(scanner.next(), scanner.next(), scanner
 						.nextInt(), scanner.nextInt(), scanner.nextInt(),

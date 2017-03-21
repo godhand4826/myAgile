@@ -45,7 +45,7 @@ public class GradeSystemTest {
 
 	@Test
 	public final void testGradeSystemConstructor() {
-		GradeSystem g=new GradeSystem("src/file/test.txt");
+		GradeSystem g=new GradeSystem("/file/test.txt");
 		Grade actualGrade1=g.getGrade("962001044");
 		Grade actualGrade2=g.getGrade("962001051");
 		
@@ -66,7 +66,7 @@ public class GradeSystemTest {
 
 	@Test
 	public final void testContainsId() {
-		GradeSystem g=new GradeSystem("src/file/test.txt");
+		GradeSystem g=new GradeSystem("/file/test.txt");
 		assertTrue(g.containsId("962001044"));
 		assertTrue(g.containsId("962001051"));
 	}
@@ -76,7 +76,7 @@ public class GradeSystemTest {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
 		System.setOut(new PrintStream(output));
 		
-		GradeSystem g=new GradeSystem("src/file/test.txt");
+		GradeSystem g=new GradeSystem("/file/test.txt");
 		String exceptOut1="§õ«Â§Ê¦¨ÁZ:lab1:\t\t81"+"\r\n"
 				+ "\tlab2:\t\t98"+"\r\n"
 				+ "\tlab3:\t\t84"+"\r\n"
@@ -90,7 +90,7 @@ public class GradeSystemTest {
 
 	@Test
 	public final void testShowRank() {
-		GradeSystem gradeSystem=new GradeSystem("src/file/test.txt");
+		GradeSystem gradeSystem=new GradeSystem("/file/test.txt");
 		
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
 		System.setOut(new PrintStream(output));
@@ -131,7 +131,7 @@ public class GradeSystemTest {
 	
 	@Test
 	public final void testGetGrade() {
-		GradeSystem gradeSystem=new GradeSystem("src/file/test.txt");
+		GradeSystem gradeSystem=new GradeSystem("/file/test.txt");
 		Grade actualGrade1=gradeSystem.getGrade("962001044");
 		Grade actualGrade2=gradeSystem.getGrade("962001051");
 		
@@ -150,5 +150,4 @@ public class GradeSystemTest {
 		assertEquals(93, actualGrade2.getFinalExam());
 	}
 
-	
 }
