@@ -4,4 +4,5 @@ addons:
   apt:
     packages:
       - language-pack-zh-hant
+env: LANG=zh_TW.UTF-8
 script: ant -Dfile.encoding=zh_TW.UTF-8 build
