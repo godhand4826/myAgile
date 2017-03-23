@@ -10,7 +10,6 @@ import org.junit.Test;
 
 import source.Main;
 
-// ¼Ò²Õ´ú¸Õ
 public class MainTest {
 
 	@BeforeClass
