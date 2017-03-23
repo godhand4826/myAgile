@@ -49,14 +49,14 @@ public class GradeSystemTest {
 		Grade actualGrade1=g.getGrade("962001044");
 		Grade actualGrade2=g.getGrade("962001051");
 		
-		assertEquals("­â©v§Ê", actualGrade1.getName());
+		assertEquals("Foo", actualGrade1.getName());
 		assertEquals(87, actualGrade1.getLab1());
 		assertEquals(86, actualGrade1.getLab2());
 		assertEquals(98, actualGrade1.getLab3());
 		assertEquals(88, actualGrade1.getMidTerm());
 		assertEquals(87, actualGrade1.getFinalExam());
 		
-		assertEquals("§õ«Â§Ê", actualGrade2.getName());
+		assertEquals("Bar", actualGrade2.getName());
 		assertEquals(81, actualGrade2.getLab1());
 		assertEquals(98, actualGrade2.getLab2());
 		assertEquals(84, actualGrade2.getLab3());
@@ -77,7 +77,7 @@ public class GradeSystemTest {
 		System.setOut(new PrintStream(output));
 		
 		GradeSystem g=new GradeSystem("/file/test.txt");
-		String exceptOut1="§õ«Â§ÊGrade:lab1:\t\t81"+"\r\n"
+		String exceptOut1="BarGrade:lab1:\t\t81"+"\r\n"
 				+ "\tlab2:\t\t98"+"\r\n"
 				+ "\tlab3:\t\t84"+"\r\n"
 				+ "\tmid-term:\t90"+"\r\n"
@@ -96,10 +96,10 @@ public class GradeSystemTest {
 		System.setOut(new PrintStream(output));
 		
 		gradeSystem.showRank("962001051");
-		assertEquals("§õ«Â§ÊRank:1\r\n", output.toString());
+		assertEquals("BarRank:1\r\n", output.toString());
 		output.reset();
 		gradeSystem.showRank("962001044");
-		assertEquals("­â©v§ÊRank:2\r\n", output.toString());
+		assertEquals("FooRank:2\r\n", output.toString());
 		
 	}
 
@@ -135,14 +135,14 @@ public class GradeSystemTest {
 		Grade actualGrade1=gradeSystem.getGrade("962001044");
 		Grade actualGrade2=gradeSystem.getGrade("962001051");
 		
-		assertEquals("­â©v§Ê", actualGrade1.getName());
+		assertEquals("Foo", actualGrade1.getName());
 		assertEquals(87, actualGrade1.getLab1());
 		assertEquals(86, actualGrade1.getLab2());
 		assertEquals(98, actualGrade1.getLab3());
 		assertEquals(88, actualGrade1.getMidTerm());
 		assertEquals(87, actualGrade1.getFinalExam());
 		
-		assertEquals("§õ«Â§Ê", actualGrade2.getName());
+		assertEquals("Bar", actualGrade2.getName());
 		assertEquals(81, actualGrade2.getLab1());
 		assertEquals(98, actualGrade2.getLab2());
 		assertEquals(84, actualGrade2.getLab3());
