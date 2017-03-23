@@ -5,7 +5,7 @@
               directory with the processing instruction <?eclipse.ant.import?>
               as the first entry and export the buildfile again. --><project basedir="." default="build" name="myAgile">
     <property environment="env"/>
-    <property name="ECLIPSE_HOME" value="../../eclipse-luna/"/>
+    <property name="ECLIPSE_HOME" value="~/Documents/eclipseFake/"/>
     <property name="junit.output.dir" value="junit"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.8"/>
