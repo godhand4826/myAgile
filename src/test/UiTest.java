@@ -210,11 +210,11 @@ public class UiTest {
 		Ui ui = new Ui(new IGradeSystemAdaptor() {
 			@Override
 			public Grade getGrade(String id) {
-				return new Grade(id, "¤h§L87", 10, 30, 60, 50, 90);
+				return new Grade(id, "fizz87", 10, 30, 60, 50, 90);
 			}
 		});
 		ui.showWelcomeMsg("123");
-		assertEquals("Welcome ¤h§L87\r\n", output.toString());
+		assertEquals("Welcome fizz87\r\n", output.toString());
 	}
 
 }
