@@ -48,10 +48,10 @@ public class Ui {
 	}
 
 	public void promptCommand() throws NoSuchCommandException {
-		System.out.println("輸入指令\t1) G 顯示成績 (Grade)");
-		System.out.println("\t2) R 顯示排名 (Rank)");
-		System.out.println("\t3) W 更新配分 (Weight)");
-		System.out.println("\t4) E 離開選單 (Exit)");
+		System.out.println("Cmd\t1) G Grade");
+		System.out.println("\t2) R Rank");
+		System.out.println("\t3) W Weight");
+		System.out.println("\t4) E Exit");
 		cmd = scanner.next();
 		if (cmd.equalsIgnoreCase("G")) {
 			gradeSystem.showGrade(id);
@@ -68,11 +68,11 @@ public class Ui {
 	}
 
 	public void promptId() {
-		System.out.println("輸入ID或Q(結束使用)?");
+		System.out.println("Enter ID or Q (Quit)?");
 	}
 
 	public void showFinishMsg() {
-		System.out.println("結束了");
+		System.out.println("Finished");
 	}
 
 	public void showWelcomeMsg(String id) {

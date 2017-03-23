@@ -35,6 +35,6 @@ public class NoSuchCommandExceptionTest {
 		NoSuchCommandException noSuchCommandException= new NoSuchCommandException();
 		assertNotNull(noSuchCommandException);
 		assertTrue(noSuchCommandException instanceof Exception);
-		assertEquals("«ü¥O¿ù¤F!", noSuchCommandException.getMessage());
+		assertEquals("Wrong Command!", noSuchCommandException.getMessage());
 	}
 }

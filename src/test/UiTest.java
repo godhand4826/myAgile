@@ -95,9 +95,9 @@ public class UiTest {
 
 		Ui ui = new Ui(iGradeSystemAdaptor);
 		ui.promptCommand();
-		String expected = "輸入指令\t1) G 顯示成績 (Grade)\r\n"
-				+ "\t2) R 顯示排名 (Rank)\r\n" + "\t3) W 更新配分 (Weight)\r\n"
-				+ "\t4) E 離開選單 (Exit)\r\n";
+		String expected = "Cmd\t1) G Grade\r\n"
+				+ "\t2) R Rank\r\n" + "\t3) W Weight\r\n"
+				+ "\t4) E Exit\r\n";
 		String expected2 = "UiTest.testPromptCommand().new IGradeSystemAdaptor() {...}.showGrade()\r\n";
 		String expectedOutput = expected + expected2;
 		assertEquals(expectedOutput, output.toString());
@@ -120,9 +120,9 @@ public class UiTest {
 
 		Ui ui = new Ui(iGradeSystemAdaptor);
 		ui.promptCommand();
-		String expected = "輸入指令\t1) G 顯示成績 (Grade)\r\n"
-				+ "\t2) R 顯示排名 (Rank)\r\n" + "\t3) W 更新配分 (Weight)\r\n"
-				+ "\t4) E 離開選單 (Exit)\r\n";
+		String expected = "Cmd\t1) G Grade\r\n"
+				+ "\t2) R Rank\r\n" + "\t3) W Weight\r\n"
+				+ "\t4) E Exit\r\n";
 		String expected2 = "UiTest.testPromptCommand2().new IGradeSystemAdaptor() {...}.showRank()\r\n";
 		String expectedOutput = expected + expected2;
 		assertEquals(expectedOutput, output.toString());
@@ -145,9 +145,9 @@ public class UiTest {
 
 		Ui ui = new Ui(iGradeSystemAdaptor);
 		ui.promptCommand();
-		String expected = "輸入指令\t1) G 顯示成績 (Grade)\r\n"
-				+ "\t2) R 顯示排名 (Rank)\r\n" + "\t3) W 更新配分 (Weight)\r\n"
-				+ "\t4) E 離開選單 (Exit)\r\n";
+		String expected = "Cmd\t1) G Grade\r\n"
+				+ "\t2) R Rank\r\n" + "\t3) W Weight\r\n"
+				+ "\t4) E Exit\r\n";
 		String expected2 = "UiTest.testPromptCommand3().new IGradeSystemAdaptor() {...}.updateWeight()\r\n";
 		String expectedOutput = expected + expected2;
 		assertEquals(expectedOutput, output.toString());
@@ -164,9 +164,9 @@ public class UiTest {
 
 		Ui ui = new Ui(iGradeSystemAdaptor);
 		ui.promptCommand();
-		String expected = "輸入指令\t1) G 顯示成績 (Grade)\r\n"
-				+ "\t2) R 顯示排名 (Rank)\r\n" + "\t3) W 更新配分 (Weight)\r\n"
-				+ "\t4) E 離開選單 (Exit)\r\n";
+		String expected = "Cmd\t1) G Grade\r\n"
+				+ "\t2) R Rank\r\n" + "\t3) W Weight\r\n"
+				+ "\t4) E Exit\r\n";
 		String expectedOutput = expected;
 		assertEquals(expectedOutput, output.toString());
 	}
@@ -189,7 +189,7 @@ public class UiTest {
 
 		Ui ui = new Ui(null);
 		ui.promptId();
-		assertEquals("輸入ID或Q(結束使用)?\r\n", output.toString());
+		assertEquals("Enter ID or Q (Quit)?\r\n", output.toString());
 	}
 
 	@Test
@@ -199,7 +199,7 @@ public class UiTest {
 
 		Ui ui = new Ui(null);
 		ui.showFinishMsg();
-		assertEquals("結束了\r\n", output.toString());
+		assertEquals("Finished\r\n", output.toString());
 	}
 
 	@Test

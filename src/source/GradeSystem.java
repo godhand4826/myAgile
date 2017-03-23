@@ -47,7 +47,7 @@ public class GradeSystem implements IGradeSystem {
 	public void showGrade(String id) {
 		Grade grade = grades.stream().parallel()
 				.filter(g -> g.getId().equals(id)).findFirst().get();
-		System.out.println(grade.getName() + "成績:lab1:\t\t" + grade.getLab1());
+		System.out.println(grade.getName() + "Grade:lab1:\t\t" + grade.getLab1());
 		System.out.println("\tlab2:\t\t" + grade.getLab2());
 		System.out.println("\tlab3:\t\t" + grade.getLab3());
 		System.out.println("\tmid-term:\t" + grade.getMidTerm());
@@ -64,18 +64,18 @@ public class GradeSystem implements IGradeSystem {
 				.parallel()
 				.filter(g -> g.getTotalGrade(weights) > grade
 						.getTotalGrade(weights)).count() + 1;
-		System.out.println(grade.getName() + "排名第" + rank);
+		System.out.println(grade.getName() + "Rank:" + rank);
 	}
 
 	@Override
 	public void updateWeight() {
-		System.out.println("舊配分");
+		System.out.println("Old weight");
 		System.out.println("\tlab1\t\t" + (int) (weights[0] * 100) + "%");
 		System.out.println("\tlab2\t\t" + (int) (weights[1] * 100) + "%");
 		System.out.println("\tlab3\t\t" + (int) (weights[2] * 100) + "%");
 		System.out.println("\tmid-term\t" + (int) (weights[3] * 100) + "%");
 		System.out.println("\tfinal exam\t" + (int) (weights[4] * 100) + "%");
-		System.out.println("輸入新配分");
+		System.out.println("Enter new weight");
 		System.out.print("\tlab1\t\t");
 
 		@SuppressWarnings("resource")
@@ -91,13 +91,13 @@ public class GradeSystem implements IGradeSystem {
 		System.out.print("\tfinal exam\t");
 		newWeights[4] = scanner.nextInt();
 
-		System.out.println("請確認新配分");
+		System.out.println("confirm weight");
 		System.out.println("\tlab1\t\t" + (int) newWeights[0] + "%");
 		System.out.println("\tlab2\t\t" + (int) newWeights[1] + "%");
 		System.out.println("\tlab3\t\t" + (int) newWeights[2] + "%");
 		System.out.println("\tmid-term\t" + (int) newWeights[3] + "%");
 		System.out.println("\tfinal exam\t" + (int) newWeights[4] + "%");
-		System.out.println("以上正確嗎? Y (Yes) 或 N (No)");
+		System.out.println("Correct? Y/N");
 
 		String check = scanner.next();
 		scanner = null;

@@ -77,7 +77,7 @@ public class GradeSystemTest {
 		System.setOut(new PrintStream(output));
 		
 		GradeSystem g=new GradeSystem("/file/test.txt");
-		String exceptOut1="李威廷成績:lab1:\t\t81"+"\r\n"
+		String exceptOut1="李威廷Grade:lab1:\t\t81"+"\r\n"
 				+ "\tlab2:\t\t98"+"\r\n"
 				+ "\tlab3:\t\t84"+"\r\n"
 				+ "\tmid-term:\t90"+"\r\n"
@@ -96,10 +96,10 @@ public class GradeSystemTest {
 		System.setOut(new PrintStream(output));
 		
 		gradeSystem.showRank("962001051");
-		assertEquals("李威廷排名第1\r\n", output.toString());
+		assertEquals("李威廷Rank:1\r\n", output.toString());
 		output.reset();
 		gradeSystem.showRank("962001044");
-		assertEquals("凌宗廷排名第2\r\n", output.toString());
+		assertEquals("凌宗廷Rank:2\r\n", output.toString());
 		
 	}
 
@@ -112,14 +112,14 @@ public class GradeSystemTest {
 		String input = "20\r\n20\r\n20\r\n20\r\n20\r\nY\r\n";
 		System.setIn(new ByteArrayInputStream(input.getBytes()));
 
-		String expected = "舊配分\r\n" + "\tlab1\t\t10%\r\n" + "\tlab2\t\t10%\r\n"
+		String expected = "Old weight\r\n" + "\tlab1\t\t10%\r\n" + "\tlab2\t\t10%\r\n"
 				+ "\tlab3\t\t10%\r\n" + "\tmid-term\t30%\r\n"
-				+ "\tfinal exam\t40%\r\n" + "輸入新配分\r\n" + "\tlab1\t\t";
+				+ "\tfinal exam\t40%\r\n" + "Enter new weight\r\n" + "\tlab1\t\t";
 		String expected2 = "\tlab2\t\t\tlab3\t\t\tmid-term\t\tfinal exam\t";
-		String expected3 = "請確認新配分\r\n" + "\tlab1\t\t20%\r\n"
+		String expected3 = "confirm weight\r\n" + "\tlab1\t\t20%\r\n"
 				+ "\tlab2\t\t20%\r\n" + "\tlab3\t\t20%\r\n"
 				+ "\tmid-term\t20%\r\n" + "\tfinal exam\t20%\r\n"
-				+ "以上正確嗎? Y (Yes) 或 N (No)\r\n";
+				+ "Correct? Y/N\r\n";
 
 		String expectedOutputs = expected + expected2 + expected3;
 

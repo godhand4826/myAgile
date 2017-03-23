@@ -33,7 +33,7 @@ public class NoSuchIDExceptionTest {
 		NoSuchIDException noSuchIDException = new NoSuchIDException();
 		assertNotNull(noSuchIDException);
 		assertTrue(noSuchIDException instanceof Exception);
-		assertEquals("ID¿ù¤F!", noSuchIDException.getMessage());
+		assertEquals("Wrong ID!", noSuchIDException.getMessage());
 	}
 
 }
