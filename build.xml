@@ -5,7 +5,7 @@
               directory with the processing instruction <?eclipse.ant.import?>
               as the first entry and export the buildfile again. --><project basedir="." default="build" name="myAgile">
     <property environment="env"/>
-    <property name="ECLIPSE_HOME" value="C:/Users/eric haung/eclipse-luna/"/>
+    <property name="ECLIPSE_HOME" value="~/Documents/eclipsFake/"/>
     <property name="junit.output.dir" value="junit"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.8"/>
@@ -59,6 +59,8 @@
         <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
             <src path="src"/>
             <classpath refid="myAgile.classpath"/>
+        	<classpath refid="~/Documents/eclipseFake/org.hamcrest.core_1.3.0.v201303031735.jar"/>
+        	<classpath refid="~/Documents/eclipseFake/org.junit_4.11.0.v201303080030/junit.jar"/>
         </javac>
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
