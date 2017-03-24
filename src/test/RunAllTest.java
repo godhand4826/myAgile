@@ -3,7 +3,6 @@ package test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
-
 @RunWith(Suite.class)
 @SuiteClasses({ GradeSystemTest.class ,
 		GradeTest.class,
@@ -13,4 +12,5 @@ import org.junit.runners.Suite.SuiteClasses;
 		UiTest.class
 		})
 public class RunAllTest {
+	
 }

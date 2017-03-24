@@ -49,7 +49,7 @@ public class UiTest {
 	public final void testUi() throws NoSuchIDException, NoSuchCommandException {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
 		System.setOut(new PrintStream(output));
-		String input = "Q\r\n";
+		String input = "Q\n";
 		System.setIn(new ByteArrayInputStream(input.getBytes()));
 		new Ui();
 	}
@@ -82,7 +82,7 @@ public class UiTest {
 	public final void testPromptCommand() throws NoSuchCommandException {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
 		System.setOut(new PrintStream(output));
-		String input = "G\r\n";
+		String input = "G\n";
 		System.setIn(new ByteArrayInputStream(input.getBytes()));
 
 		IGradeSystem iGradeSystemAdaptor = new IGradeSystemAdaptor() {
@@ -95,10 +95,10 @@ public class UiTest {
 
 		Ui ui = new Ui(iGradeSystemAdaptor);
 		ui.promptCommand();
-		String expected = "Cmd\t1) G Grade\r\n"
-				+ "\t2) R Rank\r\n" + "\t3) W Weight\r\n"
-				+ "\t4) E Exit\r\n";
-		String expected2 = "UiTest.testPromptCommand().new IGradeSystemAdaptor() {...}.showGrade()\r\n";
+		String expected = "Cmd\t1) G Grade\n"
+				+ "\t2) R Rank\n" + "\t3) W Weight\n"
+				+ "\t4) E Exit\n";
+		String expected2 = "UiTest.testPromptCommand().new IGradeSystemAdaptor() {...}.showGrade()\n";
 		String expectedOutput = expected + expected2;
 		assertEquals(expectedOutput, output.toString());
 	}
@@ -107,7 +107,7 @@ public class UiTest {
 	public final void testPromptCommand2() throws NoSuchCommandException {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
 		System.setOut(new PrintStream(output));
-		String input = "R\r\n";
+		String input = "R\n";
 		System.setIn(new ByteArrayInputStream(input.getBytes()));
 
 		IGradeSystem iGradeSystemAdaptor = new IGradeSystemAdaptor() {
@@ -120,10 +120,10 @@ public class UiTest {
 
 		Ui ui = new Ui(iGradeSystemAdaptor);
 		ui.promptCommand();
-		String expected = "Cmd\t1) G Grade\r\n"
-				+ "\t2) R Rank\r\n" + "\t3) W Weight\r\n"
-				+ "\t4) E Exit\r\n";
-		String expected2 = "UiTest.testPromptCommand2().new IGradeSystemAdaptor() {...}.showRank()\r\n";
+		String expected = "Cmd\t1) G Grade\n"
+				+ "\t2) R Rank\n" + "\t3) W Weight\n"
+				+ "\t4) E Exit\n";
+		String expected2 = "UiTest.testPromptCommand2().new IGradeSystemAdaptor() {...}.showRank()\n";
 		String expectedOutput = expected + expected2;
 		assertEquals(expectedOutput, output.toString());
 	}
@@ -132,7 +132,7 @@ public class UiTest {
 	public final void testPromptCommand3() throws NoSuchCommandException {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
 		System.setOut(new PrintStream(output));
-		String input = "W\r\n";
+		String input = "W\n";
 		System.setIn(new ByteArrayInputStream(input.getBytes()));
 
 		IGradeSystem iGradeSystemAdaptor = new IGradeSystemAdaptor() {
@@ -145,10 +145,10 @@ public class UiTest {
 
 		Ui ui = new Ui(iGradeSystemAdaptor);
 		ui.promptCommand();
-		String expected = "Cmd\t1) G Grade\r\n"
-				+ "\t2) R Rank\r\n" + "\t3) W Weight\r\n"
-				+ "\t4) E Exit\r\n";
-		String expected2 = "UiTest.testPromptCommand3().new IGradeSystemAdaptor() {...}.updateWeight()\r\n";
+		String expected = "Cmd\t1) G Grade\n"
+				+ "\t2) R Rank\n" + "\t3) W Weight\n"
+				+ "\t4) E Exit\n";
+		String expected2 = "UiTest.testPromptCommand3().new IGradeSystemAdaptor() {...}.updateWeight()\n";
 		String expectedOutput = expected + expected2;
 		assertEquals(expectedOutput, output.toString());
 	}
@@ -157,16 +157,16 @@ public class UiTest {
 	public final void testPromptCommand4() throws NoSuchCommandException {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
 		System.setOut(new PrintStream(output));
-		String input = "E\r\n";
+		String input = "E\n";
 		System.setIn(new ByteArrayInputStream(input.getBytes()));
 
 		IGradeSystem iGradeSystemAdaptor = new IGradeSystemAdaptor();
 
 		Ui ui = new Ui(iGradeSystemAdaptor);
 		ui.promptCommand();
-		String expected = "Cmd\t1) G Grade\r\n"
-				+ "\t2) R Rank\r\n" + "\t3) W Weight\r\n"
-				+ "\t4) E Exit\r\n";
+		String expected = "Cmd\t1) G Grade\n"
+				+ "\t2) R Rank\n" + "\t3) W Weight\n"
+				+ "\t4) E Exit\n";
 		String expectedOutput = expected;
 		assertEquals(expectedOutput, output.toString());
 	}
@@ -175,7 +175,7 @@ public class UiTest {
 	public final void testPromptCommand5() throws NoSuchCommandException {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
 		System.setOut(new PrintStream(output));
-		String input = "A\r\n";
+		String input = "A\n";
 		System.setIn(new ByteArrayInputStream(input.getBytes()));
 
 		Ui ui = new Ui(null);
@@ -189,7 +189,7 @@ public class UiTest {
 
 		Ui ui = new Ui(null);
 		ui.promptId();
-		assertEquals("Enter ID or Q (Quit)?\r\n", output.toString());
+		assertEquals("Enter ID or Q (Quit)?\n", output.toString());
 	}
 
 	@Test
@@ -199,7 +199,7 @@ public class UiTest {
 
 		Ui ui = new Ui(null);
 		ui.showFinishMsg();
-		assertEquals("Finished\r\n", output.toString());
+		assertEquals("Finished\n", output.toString());
 	}
 
 	@Test
@@ -214,7 +214,7 @@ public class UiTest {
 			}
 		});
 		ui.showWelcomeMsg("123");
-		assertEquals("Welcome fizz87\r\n", output.toString());
+		assertEquals("Welcome fizz87\n", output.toString());
 	}
 
 }
