@@ -7,6 +7,9 @@ public class GradeSystem implements IGradeSystem {
 	LinkedList<Grade> grades = new LinkedList<Grade>();
 	float[] weights = new float[] { 0.1f, 0.1f, 0.1f, 0.3f, 0.4f };
 
+	/**
+	 * @param fileLocation data file location in relative 
+	 */
 	public GradeSystem(String testFilePath) {// for testing
 		Scanner scanner = null;
 		try {
@@ -21,6 +24,11 @@ public class GradeSystem implements IGradeSystem {
 		}
 		scanner.close();
 	}
+
+
+	/**
+	 * default constructor
+	 */
 
 	public GradeSystem() {
 		Scanner scanner = null;
@@ -37,11 +45,25 @@ public class GradeSystem implements IGradeSystem {
 		scanner.close();
 	}
 
+
+
+
+	/**
+	 * @param id
+	 * 	the student's id
+	 * @return if the grades contains the id or not
+	 */
+
 	@Override
 	public boolean containsId(String id) {
 		return grades.stream().parallel()
 				.anyMatch(grade -> grade.getId().equals(id));
 	}
+	/**
+	 * @param id
+	 * 	the student's id
+	 * print the student's grade to console
+	 */
 
 	@Override
 	public void showGrade(String id) {
@@ -121,6 +143,12 @@ public class GradeSystem implements IGradeSystem {
 		}
 
 	}
+
+
+	/**
+	 * @param id expected student id
+	 * @return the grade of the student
+	 */
 
 	@Override
 	public Grade getGrade(String id) {

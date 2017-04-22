@@ -55,7 +55,7 @@ public class UiTest {
 	}
 
 	@Test
-	public final void testCheckId() throws NoSuchIDException {
+	public final void testCheckId() throws NoSuchIDException, NoSuchCommandException {
 		IGradeSystem iGradeSystemAdaptor = new IGradeSystemAdaptor() {
 			@Override
 			public boolean containsId(String id) {
@@ -67,7 +67,7 @@ public class UiTest {
 	}
 
 	@Test(expected = NoSuchIDException.class)
-	public final void testCheckId2() throws NoSuchIDException {
+	public final void testCheckId2() throws NoSuchIDException, NoSuchCommandException {
 		IGradeSystem iGradeSystemAdaptor = new IGradeSystemAdaptor() {
 			@Override
 			public boolean containsId(String id) {
@@ -79,7 +79,7 @@ public class UiTest {
 	}
 
 	@Test
-	public final void testPromptCommand() throws NoSuchCommandException {
+	public final void testPromptCommand() throws NoSuchCommandException, NoSuchIDException {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
 		System.setOut(new PrintStream(output));
 		String input = "G\r\n";
@@ -104,7 +104,7 @@ public class UiTest {
 	}
 
 	@Test
-	public final void testPromptCommand2() throws NoSuchCommandException {
+	public final void testPromptCommand2() throws NoSuchCommandException, NoSuchIDException {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
 		System.setOut(new PrintStream(output));
 		String input = "R\r\n";
@@ -129,7 +129,7 @@ public class UiTest {
 	}
 
 	@Test
-	public final void testPromptCommand3() throws NoSuchCommandException {
+	public final void testPromptCommand3() throws NoSuchCommandException, NoSuchIDException {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
 		System.setOut(new PrintStream(output));
 		String input = "W\r\n";
@@ -154,7 +154,7 @@ public class UiTest {
 	}
 
 	@Test
-	public final void testPromptCommand4() throws NoSuchCommandException {
+	public final void testPromptCommand4() throws NoSuchCommandException, NoSuchIDException {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
 		System.setOut(new PrintStream(output));
 		String input = "E\r\n";
@@ -172,7 +172,7 @@ public class UiTest {
 	}
 
 	@Test(expected = NoSuchCommandException.class)
-	public final void testPromptCommand5() throws NoSuchCommandException {
+	public final void testPromptCommand5() throws NoSuchCommandException, NoSuchIDException {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
 		System.setOut(new PrintStream(output));
 		String input = "A\r\n";
@@ -183,7 +183,7 @@ public class UiTest {
 	}
 
 	@Test
-	public final void testPromptId() {
+	public final void testPromptId() throws NoSuchIDException, NoSuchCommandException {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
 		System.setOut(new PrintStream(output));
 
@@ -193,7 +193,7 @@ public class UiTest {
 	}
 
 	@Test
-	public final void testShowFinishMsg() {
+	public final void testShowFinishMsg() throws NoSuchIDException, NoSuchCommandException {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
 		System.setOut(new PrintStream(output));
 
@@ -203,7 +203,7 @@ public class UiTest {
 	}
 
 	@Test
-	public final void testShowWellcomeMsg() {
+	public final void testShowWellcomeMsg() throws NoSuchIDException, NoSuchCommandException {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
 		System.setOut(new PrintStream(output));
 

@@ -10,6 +10,11 @@ public class Grade {
 	private int midTerm;
 	private int finalExam;
 
+
+	/**
+	 * default constructor
+	 */
+
 	public Grade() {
 	}
 
@@ -28,6 +33,12 @@ public class Grade {
 		return id;
 	}
 
+
+	/**
+	 * @param id expected id
+	 * 	set the student's id
+	 */
+
 	public void setId(String id) {
 		this.id = id;
 	}
@@ -35,6 +46,11 @@ public class Grade {
 	public String getName() {
 		return name;
 	}
+
+	/**
+	 * @param name expected name
+	 * 	set the student's name
+	 */
 
 	public void setName(String name) {
 		this.name = name;
@@ -44,6 +60,12 @@ public class Grade {
 		return lab1;
 	}
 
+
+	/**
+	 * @param lab1 expected lab1 grade
+	 * 	set the student's lab1 grade
+	 */
+
 	public void setLab1(int lab1) {
 		this.lab1 = lab1;
 	}
@@ -51,6 +73,12 @@ public class Grade {
 	public int getLab2() {
 		return lab2;
 	}
+
+
+	/**
+	 * @param lab2 expected lab2 grade
+	 * 	set the student's lab2 grade
+	 */
 
 	public void setLab2(int lab2) {
 		this.lab2 = lab2;
@@ -60,6 +88,12 @@ public class Grade {
 		return lab3;
 	}
 
+
+	/**
+	 * @param lab3 expected lab3 grade
+	 * 	set the student's lab3 grade
+	 */
+
 	public void setLab3(int lab3) {
 		this.lab3 = lab3;
 	}
@@ -68,6 +102,13 @@ public class Grade {
 		return midTerm;
 	}
 
+
+
+	/**
+	 * @param midTern expected midTern grade
+	 *  set the student's midtern grade
+	 */
+
 	public void setMidTern(int midTern) {
 		this.midTerm = midTern;
 	}
@@ -75,6 +116,12 @@ public class Grade {
 	public int getFinalExam() {
 		return finalExam;
 	}
+
+
+	/**
+	 * @param finalExam expected finalExam grade
+	 * 	set the student's finalexam grade
+	 */
 
 	public void setFinalExam(int finalExam) {
 		this.finalExam = finalExam;
