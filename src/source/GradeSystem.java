@@ -8,9 +8,16 @@ public class GradeSystem implements IGradeSystem {
 	float[] weights = new float[] { 0.1f, 0.1f, 0.1f, 0.3f, 0.4f };
 
 	/**
-	 * 
+	 * default constructor
 	 */
 	public GradeSystem() {
+	}
+
+	/**
+	 * @param fileLocation data file location in relative 
+	 */
+	public GradeSystem(String fileLocation) {
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -26,7 +33,7 @@ public class GradeSystem implements IGradeSystem {
 	/**
 	 * @param id
 	 * 	the student's id
-	 * print the student's grade to sysout
+	 * print the student's grade to console
 	 */
 	@Override
 	public void showGrade(String id) {
@@ -49,7 +56,7 @@ public class GradeSystem implements IGradeSystem {
 	}
 
 	/**
-	 * @param id
+	 * @param id expected student id
 	 * @return the grade of the student
 	 */
 	@Override
