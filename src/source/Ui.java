@@ -16,10 +16,10 @@ import java.util.Scanner;
 /** ***********************************************************************
 class UI (user interface) 
 
-¤£Â_prompt ¨Ï¥ÎªÌ ID. ª½¨ì¨Ï¥ÎªÌ quit.
-check ¨Ï¥ÎªÌ ID , 
+ï¿½ï¿½ï¿½_prompt ï¿½Ï¥Îªï¿½ ID. ï¿½ï¿½ï¿½ï¿½Ï¥Îªï¿½ quit.
+check ï¿½Ï¥Îªï¿½ ID , 
 showWelcomeMsg
-    ¤£Â_prompt command. °µ¤U¦Ccommandª½¨ì¨Ï¥ÎªÌexit
+    ï¿½ï¿½ï¿½_prompt command. ï¿½ï¿½ï¿½Uï¿½Ccommandï¿½ï¿½ï¿½ï¿½Ï¥Îªï¿½exit
    showGrade, 
    showRank, 
    updateWeights 
@@ -30,7 +30,7 @@ promptCommand()
 promptID()
 showFinishMsg()
 showWelcomeMsg()
-UI() «Øºc¤l «Øºc aGradeSystem
+UI() ï¿½Øºcï¿½l ï¿½Øºc aGradeSystem
 ************************************************************************ */
 
 
@@ -43,39 +43,41 @@ public class Ui {
 	/**
 	 * @throws NoSuchIDException
 	 * @throws NoSuchCommandException
-	 * default constructor
+	 *             default constructor
 	 */
 	/** ----------------------------------------------------------------------------------------------------------
-	UI() «Øºc¤l throws NoSuchIDExceptions, NoSuchCommandExceptions
+	UI() ï¿½Øºcï¿½l throws NoSuchIDExceptions, NoSuchCommandExceptions
 	-------------------------------------------------------------------------------------------------------------- */
 
 	public Ui() throws NoSuchIDException, NoSuchCommandException {
 	}
 
 	/**
-	 * @param iGradeSystemAdaptor the instance of grade system
+	 * @param iGradeSystemAdaptor
+	 *            the instance of grade system
 	 * 
 	 * @throws NoSuchIDException
 	 * @throws NoSuchCommandException
 	 * 
 	 */
-	/** ----------------------------------------------------------------------------------------------------------
-	UI() «Øºc¤l throws NoSuchIDExceptions, NoSuchCommandExceptions
-	-------------------------------------------------------------------------------------------------------------- */
 
-	public Ui(IGradeSystem iGradeSystemAdaptor) throws NoSuchIDException, NoSuchCommandException{
+	public Ui(IGradeSystem iGradeSystemAdaptor) {
+
 		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * @param id expected id of student
-	 * @return ? the database contains id above : the database doesn't contains id above
-	 * @throws NoSuchIDException if the database NOT contains that id
+	 * @param id
+	 *            expected id of student
+	 * @return ? the database contains id above : the database doesn't contains
+	 *         id above
+	 * @throws NoSuchIDException
+	 *             if the database NOT contains that id
 	 */
 	/**-------------------------------------------------------------------------------------------------------------
 	checkID (ID) throws NoSuchIDExceptions return Boolean
 	parameter: ID   a user ID  ex: 123456789
-	time:     O(n)  n is  aGradeSystem ¤º¥þ¯Z¤H¼Æ
+	time:     O(n)  n is  aGradeSystem ï¿½ï¿½ï¿½ï¿½ï¿½Zï¿½Hï¿½ï¿½
 	-----------------------------------------------------------------------------------------------------------------*/
 
 	public boolean checkId(String id) throws NoSuchIDException {
@@ -83,8 +85,8 @@ public class Ui {
 	}
 
 	/**
-	 * @throws NoSuchCommandException if user input the wrong command
-	 * prompt all command to console
+	 * @throws NoSuchCommandException
+	 *             if user input the wrong command prompt all command to console
 	 */
 	/**-------------------------------------------------------------------------------------------------------------
 	promptCommand () throws NoSuchCommandExceptions
@@ -111,8 +113,8 @@ public class Ui {
 	}
 
 	/**
-	 * @param id expected id
-	 * show welcome message and id above
+	 * @param id
+	 *            expected id show welcome message and id above
 	 */
 	/**-------------------------------------------------------------------------------------------------------------
 	showWelcomeMsg () throws NoSuchCommandExceptions
