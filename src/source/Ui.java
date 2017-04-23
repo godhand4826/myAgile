@@ -45,7 +45,6 @@ public class Ui {
 	 * 
 	 * @throws NoSuchIDException
 	 * @throws NoSuchCommandException
-	 * 
 	 */
 
 
@@ -58,10 +57,15 @@ public class Ui {
 
 
 	/**
+	 * @param iGradeSystemAdaptor
+	 *            the instance of grade system
+	 * 
+
 	 * @throws NoSuchIDException
 	 * @throws NoSuchCommandException
 	 * default constructor
 	 */
+
 	public Ui() throws NoSuchIDException, NoSuchCommandException {
 		gradeSystem = new GradeSystem();
 		try {
@@ -87,17 +91,16 @@ public class Ui {
 		} finally {
 			scanner.close();
 		}
-
-
-
-
 	}
 
 
 	/**
-	 * @param id expected id of student
-	 * @return ? the database contains id above : the database doesn't contains id above
-	 * @throws NoSuchIDException if the database NOT contains that id
+	 * @param id
+	 *            expected id of student
+	 * @return ? the database contains id above : the database doesn't contains
+	 *         id above
+	 * @throws NoSuchIDException
+	 *             if the database NOT contains that id
 	 */
 
 	/**-------------------------------------------------------------------------------------------------------------
@@ -117,11 +120,9 @@ public class Ui {
 
 
 	/**
-	 * @throws NoSuchCommandException if user input the wrong command
-	 * prompt all command to console
+	 * @throws NoSuchCommandException
+	 *             if user input the wrong command prompt all command to console
 	 */
-
-
 
 	/**-------------------------------------------------------------------------------------------------------------
 	promptCommand () throws NoSuchCommandExceptions
@@ -152,8 +153,6 @@ public class Ui {
 	 * prompt user id
 	 */
 
-
-
 	/**-------------------------------------------------------------------------------------------------------------
 	promptId () throws NoSuchCommandExceptions
 	-----------------------------------------------------------------------------------------------------------------*/
@@ -176,8 +175,8 @@ public class Ui {
 
 
 	/**
-	 * @param id expected id
-	 * show welcome message and id above
+	 * @param id
+	 *            expected id show welcome message and id above
 	 */
 
 	/**-------------------------------------------------------------------------------------------------------------
