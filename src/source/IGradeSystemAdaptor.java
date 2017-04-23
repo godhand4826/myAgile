@@ -1,5 +1,15 @@
 package source;
 
+/**
+ * An interface as an adaptor between GradeSystem and UI
+ *
+ * Bugs: none known
+ * 
+ * 
+ * @author       vivi00790
+ * @version      1.0
+ */
+
 public class IGradeSystemAdaptor implements IGradeSystem {
 
 	@Override
