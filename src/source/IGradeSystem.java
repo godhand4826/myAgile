@@ -1,5 +1,14 @@
 package source;
 
+/**
+ * An interface defined what methods a grade system should have
+ *
+ * Bugs: none known
+ * 
+ * 
+ * @author       vivi00790
+ * @version      1.0
+ */
 
 public interface IGradeSystem {
 	
