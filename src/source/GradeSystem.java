@@ -13,29 +13,29 @@ import java.util.Scanner;
  * @version      1.0
  */
 
-/** *************************************************************************
-class GradeSystems 儲存 a list of student grades.
-
-containsID(ID)  //看aGradeSystem有否含此ID
-GradeSystems () //建構子
-showGrade(ID)
-showRank(ID)
-updateWeights ()   
-*****************************************************************************/
-
+/**
+ * *************************************************************************
+ * class GradeSystems 儲存 a list of student grades.
+ * 
+ * containsID(ID) //看aGradeSystem有否含此ID GradeSystems () //建構子 showGrade(ID)
+ * showRank(ID) updateWeights ()
+ *****************************************************************************/
 
 public class GradeSystem implements IGradeSystem {
 	LinkedList<Grade> grades = new LinkedList<Grade>();
 	float[] weights = new float[] { 0.1f, 0.1f, 0.1f, 0.3f, 0.4f };
 
 	/**
-	 * @param fileLocation data file location in relative 
+	 * @param fileLocation
+	 *            data file location in relative
 	 */
-<<<<<<< HEAD
+
 	public GradeSystem(String testFilePath) {// for testing
 		Scanner scanner = null;
 		try {
-			scanner = new Scanner(GradeSystem.class.getResourceAsStream(testFilePath), "utf-8");
+			scanner = new Scanner(
+					GradeSystem.class.getResourceAsStream(testFilePath),
+					"utf-8");
 			while (scanner.hasNextLine()) {
 				grades.add(new Grade(scanner.next(), scanner.next(), scanner
 						.nextInt(), scanner.nextInt(), scanner.nextInt(),
@@ -45,24 +45,27 @@ public class GradeSystem implements IGradeSystem {
 			e.printStackTrace();
 		}
 		scanner.close();
-=======
-	/**-------------------------------------------------------------------------------------------------------------
-	GradeSystem() 建構子
-	-----------------------------------------------------------------------------------------------------------------*/
-	public GradeSystem() {
->>>>>>> 006ab5a... edited method header and added class header
 	}
 
+	/**
+	 * ------------------------------------------------------------------------
+	 * ------------------------------------- GradeSystem() 建構子
+	 * ------------------
+	 * --------------------------------------------------------
+	 * ---------------------------------------
+	 */
 
 	/**
 	 * default constructor
 	 */
-<<<<<<< HEAD
 
 	public GradeSystem() {
 		Scanner scanner = null;
 		try {
-			scanner = new Scanner(GradeSystem.class.getResourceAsStream("/file/inputFile.txt"), "utf-8");
+			scanner = new Scanner(
+					GradeSystem.class
+							.getResourceAsStream("/file/inputFile.txt"),
+					"utf-8");
 			while (scanner.hasNextLine()) {
 				grades.add(new Grade(scanner.next(), scanner.next(), scanner
 						.nextInt(), scanner.nextInt(), scanner.nextInt(),
@@ -72,50 +75,38 @@ public class GradeSystem implements IGradeSystem {
 			e.printStackTrace();
 		}
 		scanner.close();
-=======
-	/**-------------------------------------------------------------------------------------------------------------
-	GradeSystem() 建構子
-	-----------------------------------------------------------------------------------------------------------------*/
-	public GradeSystem(String fileLocation) {
-		// TODO Auto-generated constructor stub
->>>>>>> 006ab5a... edited method header and added class header
+
 	}
-
-
-
 
 	/**
 	 * @param id
-	 * 	the student's id
+	 *            the student's id
 	 * @return if the grades contains the id or not
 	 */
-<<<<<<< HEAD
 
-=======
-	/**-------------------------------------------------------------------------------------------------------------
-	containsId (ID) return Boolean
-	parameter: ID   a user ID  ex: 123456789
-	time:     O(n)  n is  aGradeSystem 內全班人數
-	-----------------------------------------------------------------------------------------------------------------*/
->>>>>>> 006ab5a... edited method header and added class header
+	/**
+	 * ------------------------------------------------------------------------
+	 * ------------------------------------- containsId (ID) return Boolean
+	 * parameter: ID a user ID ex: 123456789 time: O(n) n is aGradeSystem 內全班人數
+	 * --
+	 * ------------------------------------------------------------------------
+	 * ---------------------------------------
+	 */
+
 	@Override
 	public boolean containsId(String id) {
 		return grades.stream().parallel()
 				.anyMatch(grade -> grade.getId().equals(id));
 	}
-	/**
-	 * @param id
-	 * 	the student's id
-	 * print the student's grade to console
-	 */
-<<<<<<< HEAD
 
-=======
-	/**-------------------------------------------------------------------------------------------------------------
-	showGrade (ID) 
-	parameter: ID   a user ID  ex: 123456789
-	-----------------------------------------------------------------------------------------------------------------*/
->>>>>>> 006ab5a... edited method header and added class header
+	/**
+	 * ------------------------------------------------------------------------
+	 * ------------------------------------- showGrade (ID) parameter: ID a user
+	 * ID ex: 123456789
+	 * ----------------------------------------------------------
+	 * -------------------------------------------------------
+	 */
+
 	@Override
 	public void showGrade(String id) {
 		Grade grade = grades.stream().parallel()
@@ -128,18 +119,13 @@ public class GradeSystem implements IGradeSystem {
 		System.out.println("\ttotal grade:\t" + grade.getTotalGrade(weights));
 	}
 
-<<<<<<< HEAD
-=======
 	/**
-	 * @param id
-	 * 	the student's id
-	 * print the student's rank
+	 * ------------------------------------------------------------------------
+	 * ------------------------------------- showRank (ID) parameter: ID a user
+	 * ID ex: 123456789
+	 * ----------------------------------------------------------
+	 * -------------------------------------------------------
 	 */
-	/**-------------------------------------------------------------------------------------------------------------
-	showRank (ID) 
-	parameter: ID   a user ID  ex: 123456789
-	-----------------------------------------------------------------------------------------------------------------*/
->>>>>>> 006ab5a... edited method header and added class header
 	@Override
 	public void showRank(String id) {
 		Grade grade = grades.stream().parallel()
@@ -152,15 +138,13 @@ public class GradeSystem implements IGradeSystem {
 		System.out.println(grade.getName() + "排名第" + rank);
 	}
 
-<<<<<<< HEAD
-=======
 	/**
-	 * let user update the new weight
+	 * ------------------------------------------------------------------------
+	 * ------------------------------------- updateWeight () let user update the
+	 * new weight
+	 * ----------------------------------------------------------------
+	 * -------------------------------------------------
 	 */
-	/**-------------------------------------------------------------------------------------------------------------
-	updateWeight ()  let user update the new weight
-	-----------------------------------------------------------------------------------------------------------------*/
->>>>>>> 006ab5a... edited method header and added class header
 	@Override
 	public void updateWeight() {
 		System.out.println("舊配分");
@@ -216,19 +200,15 @@ public class GradeSystem implements IGradeSystem {
 
 	}
 
-
 	/**
-	 * @param id expected student id
-	 * @return the grade of the student
+	 * ------------------------------------------------------------------------
+	 * ------------------------------------- getGrade (ID) return Grade
+	 * parameter: ID a user ID ex: 123456789
+	 * ------------------------------------
+	 * --------------------------------------
+	 * ---------------------------------------
 	 */
-<<<<<<< HEAD
 
-=======
-	/**-------------------------------------------------------------------------------------------------------------
-	getGrade (ID)  return Grade
-	parameter: ID   a user ID  ex: 123456789
-	-----------------------------------------------------------------------------------------------------------------*/
->>>>>>> 006ab5a... edited method header and added class header
 	@Override
 	public Grade getGrade(String id) {
 		return grades.stream().parallel().filter(g -> g.getId().equals(id))
