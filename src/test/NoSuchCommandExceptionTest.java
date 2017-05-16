@@ -30,6 +30,7 @@ public class NoSuchCommandExceptionTest {
 	public void tearDown() throws Exception {
 	}
 
+	//test NoSuchCommandException constructor
 	@Test
 	public final void testNoSuchCommandException() {
 		NoSuchCommandException noSuchCommandException= new NoSuchCommandException();

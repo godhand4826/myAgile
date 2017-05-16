@@ -28,6 +28,7 @@ public class NoSuchIDExceptionTest {
 	public void tearDown() throws Exception {
 	}
 
+	//test NoSuchIDException constructor
 	@Test
 	public final void testNoSuchIDException() {
 		NoSuchIDException noSuchIDException = new NoSuchIDException();
