@@ -37,6 +37,16 @@ public class Grade {
 	public Grade() {
 	}
 
+	//initialize variables below:
+		/*
+		 * this.id = id;
+			this.name = name;
+			this.lab1 = lab1;
+			this.lab2 = lab2;
+			this.lab3 = lab3;
+			this.midTerm = midTerm;
+			this.finalExam = finalExam;
+		 */
 	public Grade(String id, String name, int lab1, int lab2, int lab3,
 			int midTerm, int finalExam) {
 		this.id = id;
@@ -55,7 +65,7 @@ public class Grade {
 	/**-------------------------------------------------------------------------------------------------------------
 	getId () return String	
 	-----------------------------------------------------------------------------------------------------------------*/
-
+	//return this.id
 	public String getId() {
 		return id;
 	}
@@ -70,7 +80,7 @@ public class Grade {
 	setId (ID) 	
 	parameter: ID   a user ID  ex: 123456789
 	-----------------------------------------------------------------------------------------------------------------*/
-
+	//this.id = id
 	public void setId(String id) {
 		this.id = id;
 	}
@@ -81,7 +91,7 @@ public class Grade {
 	/**-------------------------------------------------------------------------------------------------------------
 	getName () return String
 	-----------------------------------------------------------------------------------------------------------------*/
-
+	//return name
 	public String getName() {
 		return name;
 	}
@@ -95,6 +105,7 @@ public class Grade {
 	containsId (ID)
 	parameter: ID   a user ID  ex: 123456789
 	-----------------------------------------------------------------------------------------------------------------*/
+	//this.name = name
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -106,7 +117,7 @@ public class Grade {
 	/**-------------------------------------------------------------------------------------------------------------
 	getLab1 () return int
 	-----------------------------------------------------------------------------------------------------------------*/
-
+	//return lab1
 	public int getLab1() {
 		return lab1;
 	}
@@ -121,7 +132,7 @@ public class Grade {
 	setLab1 (lab1)
 	parameter: lab1   a user lab1 grade  ex: 99
 	-----------------------------------------------------------------------------------------------------------------*/
-
+	//this.lab1 = lab1
 	public void setLab1(int lab1) {
 		this.lab1 = lab1;
 	}
@@ -133,7 +144,7 @@ public class Grade {
 	/**-------------------------------------------------------------------------------------------------------------
 	getLab2 () return int
 	-----------------------------------------------------------------------------------------------------------------*/
-
+	//return lab2
 	public int getLab2() {
 		return lab2;
 	}
@@ -148,7 +159,7 @@ public class Grade {
 	setLab2 (lab2)
 	parameter: lab2   a user lab2 grade  ex: 99
 	-----------------------------------------------------------------------------------------------------------------*/
-
+	//this.lab2 = lab2
 	public void setLab2(int lab2) {
 		this.lab2 = lab2;
 	}
@@ -160,7 +171,7 @@ public class Grade {
 	/**-------------------------------------------------------------------------------------------------------------
 	getLab3 () return int
 	-----------------------------------------------------------------------------------------------------------------*/
-
+	//return lab3
 	public int getLab3() {
 		return lab3;
 	}
@@ -175,7 +186,7 @@ public class Grade {
 	setLab3 (lab3)
 	parameter: lab3   a user lab3 grade  ex: 99
 	-----------------------------------------------------------------------------------------------------------------*/
-
+	//this.lab3 = lab3
 	public void setLab3(int lab3) {
 		this.lab3 = lab3;
 	}
@@ -187,7 +198,7 @@ public class Grade {
 	/**-------------------------------------------------------------------------------------------------------------
 	getMidTerm () return int
 	-----------------------------------------------------------------------------------------------------------------*/
-
+	//return midTerm
 	public int getMidTerm() {
 		return midTerm;
 	}
@@ -203,7 +214,7 @@ public class Grade {
 	setMidTern (midTern)
 	parameter: midTern   a user Mid Tern grade  ex: 99
 	-----------------------------------------------------------------------------------------------------------------*/
-
+	//this.midTerm = midTern
 	public void setMidTern(int midTern) {
 		this.midTerm = midTern;
 	}
@@ -215,7 +226,7 @@ public class Grade {
 	/**-------------------------------------------------------------------------------------------------------------
 	getFinalExam () return int
 	-----------------------------------------------------------------------------------------------------------------*/
-
+	//return finalExam
 	public int getFinalExam() {
 		return finalExam;
 	}
@@ -230,7 +241,7 @@ public class Grade {
 	setFinalExam (finalExam)
 	parameter: finalExam   a user final Exam grade  ex: 99
 	-----------------------------------------------------------------------------------------------------------------*/
-
+	//this.finalExam = finalExam
 	public void setFinalExam(int finalExam) {
 		this.finalExam = finalExam;
 	}
@@ -244,7 +255,7 @@ public class Grade {
 	/**-------------------------------------------------------------------------------------------------------------
 	getTotalGrade () return int
 	-----------------------------------------------------------------------------------------------------------------*/
-
+	//return lab1 * weights[lab1] + lab2 * weights[lab2] + lab3 * weights[lab3] + midTerm * weights[midTerm] + finalExam * weights[finalExam]
 	public int getTotalGrade(float[] weights) {
 		return Math.round(lab1 * weights[0] + lab2 * weights[1] + lab3
 				* weights[2] + midTerm * weights[3] + finalExam * weights[4]);

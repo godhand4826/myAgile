@@ -39,24 +39,28 @@ public class GradeTest {
 		System.setOut(stdout);
 	}
 
+	//test Grade constructor
 	@Test
 	public final void testGrade() {
 		Grade grade = new Grade();
 		assertNotNull(grade);
 	}
 
+	//test Grade constructor
 	@Test
 	public final void testGradeStringStringIntIntIntIntInt() {
 		Grade grade = new Grade("13556974", "腑动", 0, 10, 20, 30, 40);
 		assertNotNull(grade);
 	}
 
+	//test GetId
 	@Test
 	public final void testGetId() {
 		Grade grade = new Grade("13556974", "腑动", 0, 10, 20, 30, 40);
 		assertEquals("13556974", grade.getId());
 	}
 
+	//test SetId
 	@Test
 	public final void testSetId() {
 		Grade grade = new Grade("13556974", "腑动", 0, 10, 20, 30, 40);
@@ -64,12 +68,14 @@ public class GradeTest {
 		assertEquals("46316166", grade.getId());
 	}
 
+	//test GetName
 	@Test
 	public final void testGetName() {
 		Grade grade = new Grade("13556974", "腑动", 0, 10, 20, 30, 40);
 		assertEquals("腑动", grade.getName());
 	}
 
+	//test SetName
 	@Test
 	public final void testSetName() {
 		Grade grade = new Grade("13556974", "腑动", 0, 10, 20, 30, 40);
@@ -77,12 +83,14 @@ public class GradeTest {
 		assertEquals("敬", grade.getName());
 	}
 
+	//test GetLab1
 	@Test
 	public final void testGetLab1() {
 		Grade grade = new Grade("13556974", "腑动", 0, 10, 20, 30, 40);
 		assertEquals(0, grade.getLab1());
 	}
 
+	//test SetLab1
 	@Test
 	public final void testSetLab1() {
 		Grade grade = new Grade("13556974", "腑动", 0, 10, 20, 30, 40);
@@ -90,12 +98,14 @@ public class GradeTest {
 		assertEquals(55, grade.getLab1());
 	}
 
+	//test GetLab2
 	@Test
 	public final void testGetLab2() {
 		Grade grade = new Grade("13556974", "腑动", 0, 10, 20, 30, 40);
 		assertEquals(10, grade.getLab2());
 	}
 
+	//test SetLab2
 	@Test
 	public final void testSetLab2() {
 		Grade grade = new Grade("13556974", "腑动", 0, 10, 20, 30, 40);
@@ -103,12 +113,14 @@ public class GradeTest {
 		assertEquals(55, grade.getLab2());
 	}
 
+	//test GetLab3
 	@Test
 	public final void testGetLab3() {
 		Grade grade = new Grade("13556974", "腑动", 0, 10, 20, 30, 40);
 		assertEquals(20, grade.getLab3());
 	}
 
+	//test SetLab3
 	@Test
 	public final void testSetLab3() {
 		Grade grade = new Grade("13556974", "腑动", 0, 10, 20, 30, 40);
@@ -116,12 +128,14 @@ public class GradeTest {
 		assertEquals(55, grade.getLab3());
 	}
 
+	//test GetMidTerm
 	@Test
 	public final void testGetMidTerm() {
 		Grade grade = new Grade("13556974", "腑动", 0, 10, 20, 30, 40);
 		assertEquals(30, grade.getMidTerm());
 	}
 
+	//test SetMidTern
 	@Test
 	public final void testSetMidTern() {
 		Grade grade = new Grade("13556974", "腑动", 0, 10, 20, 30, 40);
@@ -129,12 +143,14 @@ public class GradeTest {
 		assertEquals(55, grade.getMidTerm());
 	}
 
+	///test GetFinalExam
 	@Test
 	public final void testGetFinalExam() {
 		Grade grade = new Grade("13556974", "腑动", 0, 10, 20, 30, 40);
 		assertEquals(40, grade.getFinalExam());
 	}
 
+	//test SetFinalExam
 	@Test
 	public final void testSetFinalExam() {
 		Grade grade = new Grade("13556974", "腑动", 0, 10, 20, 30, 40);
@@ -142,6 +158,7 @@ public class GradeTest {
 		assertEquals(55, grade.getFinalExam());
 	}
 
+	//test GetTotalGrade
 	@Test
 	public final void testGetTotalGrade() {
 		float[] weights = new float[] { 0.1f, 0.1f, 0.1f, 0.3f, 0.4f };

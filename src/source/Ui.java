@@ -66,6 +66,34 @@ public class Ui {
 	 * default constructor
 	 */
 
+	/*
+	 * 
+	 * gradeSystem = new GradeSystem();
+	 * try
+	 *  while(true)
+	 *   id = scanner.next()
+	 *   if(id==Q)
+	 *    break
+	 *   checkId(id)
+	 *   showWelcomeMsg(id)
+	 *   ex:
+	 *   Welcome 李威廷
+	 *   while(cmd!=E)
+	 *    promptCommand()
+	 *    ex:
+	 *    輸入指令 1) G 顯示成績 (Grade) 
+	 *    2) R 顯示排名 (Rank) 
+	 *    3) W更新配分 (Weight) 
+	 *    4) E 離開選單 (Exit)  
+	 *  end while
+	 *  showFinishMsg()
+	 *  ex:
+	 *  結束了
+	 *  catch NoSuchIDException
+	 *  	throw
+	 *  catch NoSuchCommandException
+	 *  	throw
+	 */
 	public Ui() throws NoSuchIDException, NoSuchCommandException {
 		gradeSystem = new GradeSystem();
 		try {
@@ -109,7 +137,12 @@ public class Ui {
 	time:     O(n)  n is  aGradeSystem 內全班人數
 	-----------------------------------------------------------------------------------------------------------------*/
 
-
+	/*
+	 * if(gradeSystem.containsId(id))
+	 *  return true
+	 * else
+	 *  throw NoSuchIDException 
+	 */
 	public boolean checkId(String id) throws NoSuchIDException {
 		if (gradeSystem.containsId(id)) {
 			return true;
@@ -128,6 +161,25 @@ public class Ui {
 	promptCommand () throws NoSuchCommandExceptions
 	-----------------------------------------------------------------------------------------------------------------*/
 
+	/*
+	 * print commands
+	 * ex:
+	 * 輸入指令 1) G 顯示成績 (Grade) 
+	 *    2) R 顯示排名 (Rank) 
+	 *    3) W更新配分 (Weight) 
+	 *    4) E 離開選單 (Exit)  
+	 * cmd= scanner.next();
+	 * if(cmd==G)
+	 *  gradeSystem.showGrade(id);
+	 * if(cmd==R)
+	 *  gradeSystem.showRank(id);
+	 * if(cmd==W)
+	 *  gradeSystem.updateWeight();
+	 * if(cmd==E)
+	 *  do nothing
+	 * else
+	 *  throw NoSuchCommandException()
+	 */
 	public void promptCommand() throws NoSuchCommandException {
 		System.out.println("輸入指令\t1) G 顯示成績 (Grade)");
 		System.out.println("\t2) R 顯示排名 (Rank)");
@@ -157,6 +209,11 @@ public class Ui {
 	promptId () throws NoSuchCommandExceptions
 	-----------------------------------------------------------------------------------------------------------------*/
 
+	//print id
+		//ex:
+		/*輸入ID或Q(結束使用)?
+		 * 
+		 */
 	public void promptId() {
 		System.out.println("輸入ID或Q(結束使用)?");
 	}
@@ -169,6 +226,11 @@ public class Ui {
 	showFinishMsg () throws NoSuchCommandExceptions
 	-----------------------------------------------------------------------------------------------------------------*/
 
+	/*
+	 * print finish msg
+	 * ex:
+	 * 結束了
+	 */
 	public void showFinishMsg() {
 		System.out.println("結束了");
 	}
@@ -184,6 +246,11 @@ public class Ui {
 	parameter: ID   a user ID  ex: 123456789
 	-----------------------------------------------------------------------------------------------------------------*/
 
+	/*
+	 * print welcome msg
+	 * ex:
+	 * Welcome 李威廷
+	 */
 	public void showWelcomeMsg(String id) {
 		System.out.println("Welcome " + gradeSystem.getGrade(id).getName());
 	}

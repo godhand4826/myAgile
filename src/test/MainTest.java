@@ -29,6 +29,7 @@ public class MainTest {
 	public void tearDown() throws Exception {
 	}
 
+	//test Main
 	@Test
 	public final void testMain() {
 		try {

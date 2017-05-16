@@ -45,6 +45,7 @@ public class UiTest {
 		System.setOut(stdout);
 	}
 
+	//test Ui constructor
 	@Test(timeout = 1000)
 	public final void testUi() throws NoSuchIDException, NoSuchCommandException {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
@@ -54,6 +55,8 @@ public class UiTest {
 		new Ui();
 	}
 
+	
+	//test CheckId true
 	@Test
 	public final void testCheckId() throws NoSuchIDException {
 		IGradeSystem iGradeSystemAdaptor = new IGradeSystemAdaptor() {
@@ -66,6 +69,7 @@ public class UiTest {
 		assertTrue(ui.checkId("kaldsfj"));
 	}
 
+	//test CheckId false
 	@Test(expected = NoSuchIDException.class)
 	public final void testCheckId2() throws NoSuchIDException {
 		IGradeSystem iGradeSystemAdaptor = new IGradeSystemAdaptor() {
@@ -78,6 +82,7 @@ public class UiTest {
 		ui.checkId("kals;jfkldjf;");
 	}
 
+	//test PromptCommand input G
 	@Test
 	public final void testPromptCommand() throws NoSuchCommandException {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
@@ -103,6 +108,7 @@ public class UiTest {
 		assertEquals(expectedOutput, output.toString());
 	}
 
+	//test PromptCommand input R
 	@Test
 	public final void testPromptCommand2() throws NoSuchCommandException {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
@@ -128,6 +134,7 @@ public class UiTest {
 		assertEquals(expectedOutput, output.toString());
 	}
 
+	//test PromptCommand input W
 	@Test
 	public final void testPromptCommand3() throws NoSuchCommandException {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
@@ -153,6 +160,7 @@ public class UiTest {
 		assertEquals(expectedOutput, output.toString());
 	}
 
+	//test PromptCommand input E
 	@Test
 	public final void testPromptCommand4() throws NoSuchCommandException {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
@@ -182,6 +190,7 @@ public class UiTest {
 		ui.promptCommand();
 	}
 
+	//test PromptId
 	@Test
 	public final void testPromptId() {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
@@ -192,6 +201,7 @@ public class UiTest {
 		assertEquals("輸入ID或Q(結束使用)?\r\n", output.toString());
 	}
 
+	//test ShowFinishMsg
 	@Test
 	public final void testShowFinishMsg() {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
@@ -202,6 +212,7 @@ public class UiTest {
 		assertEquals("結束了\r\n", output.toString());
 	}
 
+	//test ShowWellcomeMsg
 	@Test
 	public final void testShowWellcomeMsg() {
 		ByteArrayOutputStream output = new ByteArrayOutputStream();

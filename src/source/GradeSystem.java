@@ -59,6 +59,13 @@ public class GradeSystem implements IGradeSystem {
 	 * default constructor
 	 */
 
+	/*
+	 * scanner s;
+	 * 	while(s.hasNext())
+	 * 	 grades.add(new GradeObject(s scan student data)
+	 *  end while
+		
+	 */
 	public GradeSystem() {
 		Scanner scanner = null;
 		try {
@@ -93,6 +100,13 @@ public class GradeSystem implements IGradeSystem {
 	 * ---------------------------------------
 	 */
 
+	/*
+	 * foreach grade in grades
+	 *  if(grade.getId().equals(id))
+	 *   return true
+	 *  end if
+	 *  return false
+	 */
 	@Override
 	public boolean containsId(String id) {
 		return grades.stream().parallel()
@@ -107,6 +121,19 @@ public class GradeSystem implements IGradeSystem {
 	 * -------------------------------------------------------
 	 */
 
+	/*
+	 * foreach grade in grades
+	 *  if(grade.getId().equals(id))
+	 *   print all grade
+	 *   ex:
+	 *   李威廷成績：lab1：     81　
+				lab2：     98　
+				lab3：     84　
+				mid-term :  90　
+				final exam:  93 
+                total grade :  91
+        end if
+	 */
 	@Override
 	public void showGrade(String id) {
 		Grade grade = grades.stream().parallel()
@@ -126,6 +153,14 @@ public class GradeSystem implements IGradeSystem {
 	 * ----------------------------------------------------------
 	 * -------------------------------------------------------
 	 */
+	/*
+	 * grade = grade.sort()
+	 * foreach grade in grades
+	 *  if(grade.getId().equals(id))
+	 *   print position of grade
+	 *   ex:
+	 *   李威廷排名第22
+	 */
 	@Override
 	public void showRank(String id) {
 		Grade grade = grades.stream().parallel()
@@ -144,6 +179,55 @@ public class GradeSystem implements IGradeSystem {
 	 * new weight
 	 * ----------------------------------------------------------------
 	 * -------------------------------------------------
+	 */
+	/*
+	 * print origin weight
+	 * ex:
+	 * 舊配分 
+               lab1           10%
+               lab2           10%
+               lab3           10%
+               mid-term       30%
+               final exam      40%
+                        輸入新配分
+               lab1
+       scanner s;
+       s.next();
+       print lab1 weight user input and next
+       ex:
+       20%
+       lab2
+       s.next();
+       print lab2 weight user input and next
+       ex:
+       20%
+       lab3
+       s.next();
+       print lab3 weight user input and next
+       ex:
+       20%
+       mid-term
+       print mid-term weight user input and next
+       ex:
+       20%
+       final exam
+       print final exam weight user input and new weights and confirm msg
+       ex:
+       20%
+                         請確認新配分
+           lab1           20%
+           lab2           20%
+           lab3           20%
+           mid-term       20%
+           final exam      20%
+      	以上正確嗎? Y (Yes) 或 N (No)
+      	confirm=s.next()
+		if(confirm==Y)
+		 if(sum of weights ==100)
+		  save change and return
+		else
+		 return
+
 	 */
 	@Override
 	public void updateWeight() {
@@ -209,6 +293,12 @@ public class GradeSystem implements IGradeSystem {
 	 * ---------------------------------------
 	 */
 
+	/*
+	 * foreach grade in grades
+	 *  if(grade.getId().equals(id))
+	 *   return grade
+	 *  end if
+	 */
 	@Override
 	public Grade getGrade(String id) {
 		return grades.stream().parallel().filter(g -> g.getId().equals(id))
